@@ -29,25 +29,38 @@ def setupBox():
 
 
 # Code for 80 point version goes here
-endX = (490)
-endY = (-280)
-startX = (-490)
-startY = (-300)
 def v80():
+    lines.speed(20)
     lines.penup()
     lines.goto(-490, -300)
     lines.pendown()
-
-    for x in range(100):
+    endX = (490)
+    endY = (-290)
+    startX = (-490)
+    startY = (-300)
+    for x in range(32):
         lines.goto(endX, endY)
         lines.goto(startX, startY)
-        #change values of start X and endY here
-    for x in range(100)
+        startX += 30
+        endY += 20
+        lines.goto(startX,startY)
+
 
 # Code for the 90 point version goes here
 def v90():
     # Calling the 80 point function - don't copy-paste from earlier method!!
     v80()
+    lines.goto(490, -300)
+    endX = (-490)
+    endY = (-290)
+    startX = (490)
+    startY = (-300)
+    for x in range(32):
+        lines.goto(endX, endY)
+        lines.goto(startX, startY)
+        startX -= 30
+        endY += 20
+        lines.goto(startX,startY)
 
 
 
@@ -56,19 +69,56 @@ def v90():
 def v100():
     # Calling the 90 point function - don't copy-paste from earlier method!!
     v90()
-
-
+    lines.goto(-490, 330)
+    endX = (490)
+    endY = (320)
+    startX = (-490)
+    startY = (320)
+    for x in range(32):
+        lines.goto(endX, endY)
+        lines.goto(startX, startY)
+        startX += 30
+        endY -= 20
+        lines.goto(startX,startY)
+    lines.goto(490, 330)
+    endX = (-490)
+    endY = (320)
+    startX = (490)
+    startY = (330)
+    for x in range(32):
+        lines.goto(endX, endY)
+        lines.goto(startX, startY)
+        startX -= 30
+        endY -= 20
+        lines.goto(startX, startY)
 
 
 # Code for the 110 point version here
 def v110():
     # Calling the 100 point function - don't copy-paste from earlier method!!
     v100()
+    lines.penup()
+    lines.goto(300, -200)
+    lines.pendown()
+    endX = (300)
+    endY = (-100)
+    startX = (-300)
+    startY = (-100)
+    for x in range(32):
+        lines.goto(endX, endY)
+        lines.goto(startX, startY)
+        startX += 20
+        endY -= 20
+        lines.goto(startX, startY)
+
+
+
+
 
 
 setupScreen()
 setupBox()
-v80()
+v110()
 
 
 
