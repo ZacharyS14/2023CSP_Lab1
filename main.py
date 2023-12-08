@@ -101,19 +101,54 @@ def v110():
     lines.goto(300, -200)
     lines.pendown()
     endX = (300)
-    endY = (-100)
+    endY = (-90)
     startX = (-300)
     startY = (-100)
     for x in range(32):
         lines.goto(endX, endY)
         lines.goto(startX, startY)
-        startX += 20
-        endY -= 20
+        startX += 17
+        endY += 7
         lines.goto(startX, startY)
-
-
-
-
+    lines.penup()
+    lines.goto(300, -200)
+    lines.pendown()
+    endX = (-300)
+    endY = (-90)
+    startX = (300)
+    startY = (-100)
+    for x in range(32):
+        lines.goto(endX, endY)
+        lines.goto(startX, startY)
+        startX -= 17
+        endY += 7
+        lines.goto(startX, startY)
+    lines.penup()
+    lines.goto(300, -200)
+    lines.pendown()
+    endX = (300)
+    endY = (90)
+    startX = (-300)
+    startY = (100)
+    for x in range(32):
+        lines.goto(endX, endY)
+        lines.goto(startX, startY)
+        startX += 17
+        endY -= 7
+        lines.goto(startX, startY)
+    lines.penup()
+    lines.goto(300, -200)
+    lines.pendown()
+    endX = (-300)
+    endY = (90)
+    startX = (300)
+    startY = (100)
+    for x in range(32):
+        lines.goto(endX, endY)
+        lines.goto(startX, startY)
+        startX -= 17
+        endY -= 7
+        lines.goto(startX, startY)
 
 
 setupScreen()
